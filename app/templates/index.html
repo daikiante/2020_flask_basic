@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Flask app</h1>
+
+    <a href="{{ url_for('second') }}">
+        <p>セカンド</p>
+    </a>
+
+    <form action="{{ url_for('input') }}" method="POST">
+        <div>
+            <label>タイトル</label>
+            <input type="text" name="title">
+        </div>
+
+        <div>
+            <label>本文</label>
+            <textarea name="text" rows="3"></textarea>
+        </div>
+        <button type="submit">作成</button>
+    </form>
+
+</body>
+</html>
